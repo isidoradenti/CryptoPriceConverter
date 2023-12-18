@@ -13,7 +13,7 @@ function getCryptoPrice() {
         .then(data => {
             const bitcoinPrice = data.bitcoin.usd;
             const convertedAmount = inputAmount * bitcoinPrice;
-            const resultText = `${inputAmount} USD is approximately ${convertedAmount.toFixed(2)} BTC`;
+            const resultText = `${inputAmount} BTC is approximately ${convertedAmount.toFixed(2)} USD`;
             document.getElementById("cryptoResult").innerText = resultText;
         })
         .catch(error => {
